@@ -75,17 +75,18 @@ body {
    ========================================== */
 .contenedor-cards {
   display: flex;                  /* Flex container padre */
+  flex-wrap: wrap;                /* Permite que bajen si la pantalla es angosta */
   justify-content: space-between;
   align-items: stretch;
   gap: 1.5rem;                    /* Espaciado regular con gap */
   margin-top: 1rem;
 }
 .card {
-  flex: 1;                        /* Los flex items ocupan el mismo ancho */
+  flex: 1 1 250px;                /* Se expanden, se achican y tienen un ancho base */
   background-color: #f0f4f8;
   border: 1px solid #57c5b6;
   border-radius: 6px;
-  padding: 24px;                  /* Box model: mínimo 20px de padding interno */
+  padding: 24px;                  /* Box model: padding interno */
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
