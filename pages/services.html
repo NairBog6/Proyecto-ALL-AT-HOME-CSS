@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="./styles/styles.css">
+  <!-- CSS Stylesheet (Ruta relativa correcta desde pages/) -->
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
   <header class="header-principal">
@@ -28,16 +28,18 @@
     <section class="seccion-contenido">
       <h1 class="titulo-principal">Our Delivery Services</h1>
       <p class="parrafo-destacado">Fast, flexible, and reliable shipping plans designed around your routine.</p>
-      <div class="contenedor-cards">
-        <article class="card">
+      
+      <!-- Contenedor Grid con tarjetas identificadas -->
+      <div class="contenedor-cards contenedor-cards-servicios">
+        <article class="card card-envios">
           <h3>Fast Shipping</h3>
           <p>Priority doorstep delivery in minutes for hot meals and immediate cravings.</p>
         </article>
-        <article class="card">
+        <article class="card card-programados">
           <h3>Scheduled Delivery</h3>
           <p>Choose your preferred date and time for better organization and fixed rates.</p>
         </article>
-        <article class="card">
+        <article class="card card-suscripcion">
           <h3>Monthly Subscription</h3>
           <p>Join the All At Home membership for free shipping and exclusive discounts.</p>
         </article>

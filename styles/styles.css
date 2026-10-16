@@ -35,10 +35,10 @@ body {
    ========================================== */
 .header-principal {
   background-color: #1a5f7a;
-  padding: 1.2rem 2rem;           /* Box model: aire interno */
-  display: flex;                  /* Flex container */
-  justify-content: space-between; /* Logo a la izquierda, enlaces a la derecha */
-  align-items: center;            /* Centrado vertical */
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo {
   color: #ffffff;
@@ -49,7 +49,7 @@ body {
 .navegacion {
   display: flex;
   align-items: center;
-  gap: 1.5rem;                    /* Espaciado uniforme con gap */
+  gap: 1.5rem;
 }
 .navegacion a {
   color: #ffffff;
@@ -66,27 +66,49 @@ body {
 .hero,
 .seccion-contenido,
 .seccion-destacados {
-  padding: 2.5rem 2rem;           /* Padding para que el texto no toque bordes */
+  padding: 2.5rem 2rem;
   background-color: #ffffff;
-  margin-bottom: 2rem;            /* Margen para distinguir inicio y fin de sección */
+  margin-bottom: 2rem;
 }
 /* ==========================================
-   5. CONTENEDOR FLEX DE TARJETAS (Requisito Flexbox)
+   5. CONTENEDOR GRID DE TARJETAS (Mobile-First)
    ========================================== */
+/* Asignación de áreas semánticas para las tarjetas */
+.card-envios {
+  grid-area: envios;
+}
+.card-variedad {
+  grid-area: variedad;
+}
+.card-programados {
+  grid-area: programados;
+}
+.card-suscripcion {
+  grid-area: suscripcion;
+}
+/* Grilla base para Mobile: 1 sola columna fluida con áreas apiladas */
 .contenedor-cards {
-  display: flex;                  /* Flex container padre */
-  flex-wrap: wrap;                /* Permite que bajen si la pantalla es angosta */
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 1.5rem;                    /* Espaciado regular con gap */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "envios"
+    "variedad"
+    "programados";
+  gap: 1.5rem;
   margin-top: 1rem;
 }
+/* Grilla base de la página de servicios (Mobile) */
+.contenedor-cards-servicios {
+  grid-template-areas:
+    "envios"
+    "programados"
+    "suscripcion";
+}
 .card {
-  flex: 1 1 250px;                /* Se expanden, se achican y tienen un ancho base */
   background-color: #f0f4f8;
   border: 1px solid #57c5b6;
   border-radius: 6px;
-  padding: 24px;                  /* Box model: padding interno */
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -150,4 +172,20 @@ body {
   color: #f0f4f8;
   text-align: center;
   padding: 1.5rem;
+}
+/* ==========================================
+   8. MEDIA QUERIES (Breakpoint Desktop)
+   ========================================== */
+@media (min-width: 1024px) {
+  /* En escritorio (1024px+), las tarjetas se distribuyen en 3 columnas */
+  .contenedor-cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "envios variedad programados";
+  }
+  .contenedor-cards-servicios {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "envios programados suscripcion";
+  }
 }
