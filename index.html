@@ -10,50 +10,83 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
-  <!-- CSS Stylesheet Corregido -->
+  <!-- Bootstrap CSS v5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- CSS personalizado (después de Bootstrap) -->
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-  <!-- Navbar Flexible con justify-content: space-between y align-items: center -->
-  <header class="header-principal">
-    <a href="./index.html" class="logo">All At Home</a>
-    <nav class="navegacion">
-      <a href="./index.html">Home</a>
-      <a href="./pages/about-us.html">About Us</a>
-      <a href="./pages/products.html">Products</a>
-      <a href="./pages/services.html">Services</a>
-      <a href="./pages/contact.html">Contact</a>
+  <!-- Navbar Responsivo con Bootstrap y Logo -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+          <img src="./assets/image-1.jpeg" alt="All At Home Logo" width="36" height="36" class="rounded-circle object-fit-cover">
+          <span>ALL AT HOME</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   <main>
-    <!-- Sección Hero con padding y margin -->
-    <section class="hero">
+    <!-- Sección Hero -->
+    <section class="hero container my-5 text-center">
       <h1 class="titulo-principal">Everything you need, delivered right to your door</h1>
-      <p class="parrafo-destacado">
-        Welcome to <strong>All At Home</strong>. We take care of bringing food, grocery items and essentials straight to your doorstep so you don't have to leave the house. Convenience, speed, and security—all in one place.
+      <p class="parrafo-destacado mx-auto" style="max-width: 700px;">
+        Welcome to <strong>ALL AT HOME</strong>. We take care of bringing food, grocery items and essentials straight to your doorstep so you don't have to leave the house. Convenience, speed, and security—all in one place.
       </p>
     </section>
-    <!-- Sección con CSS Grid por áreas -->
-    <section class="seccion-destacados">
-      <h2 class="subtitulo">Our Core Services</h2>
-      <div class="contenedor-cards">
-        <article class="card card-envios">
-          <h3>Fast Shipping</h3>
-          <p>We arrive at your doorstep in minutes with fresh, high-quality meals and products.</p>
-        </article>
-        <article class="card card-variedad">
-          <h3>Absolute Variety</h3>
-          <p>From your favorite restaurants and groceries to cleaning and daily essentials.</p>
-        </article>
-        <article class="card card-programados">
-          <h3>Scheduled Orders</h3>
-          <p>Plan your meals ahead and set the exact delivery time that fits your schedule.</p>
-        </article>
+    <!-- Sección de Destacados con Sistema de Grilla Bootstrap -->
+    <section class="seccion-destacados container my-5">
+      <h2 class="subtitulo text-center mb-4">Our Core Services</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <article class="card card-envios h-100 p-3 shadow-sm">
+            <h3>Fast Shipping</h3>
+            <p>We arrive at your doorstep in minutes with fresh, high-quality meals and products.</p>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="card card-variedad h-100 p-3 shadow-sm">
+            <h3>Absolute Variety</h3>
+            <p>From your favorite restaurants and groceries to cleaning and daily essentials.</p>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="card card-programados h-100 p-3 shadow-sm">
+            <h3>Scheduled Orders</h3>
+            <p>Plan your meals ahead and set the exact delivery time that fits your schedule.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer-principal">
-    <p>&copy; 2026 All At Home. All rights reserved.</p>
+  <footer class="footer-principal text-center py-3">
+    <p class="mb-0">&copy; 2026 All At Home. All rights reserved.</p>
   </footer>
+  <!-- Bootstrap JS Bundle con Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
