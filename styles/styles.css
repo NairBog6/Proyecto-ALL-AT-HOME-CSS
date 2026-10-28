@@ -14,6 +14,7 @@ body {
   font-size: 2.2rem;
   color: #1a5f7a;
   margin-bottom: 1rem;
+  animation: fadeInSlide 0.6s ease-out both;
 }
 .subtitulo {
   font-size: 1.5rem;
@@ -127,4 +128,34 @@ body {
 }
 .seccion-contenido img {
   border: 1px solid #57c5b6;
+}
+/* ==========================================
+   9. ANIMACIONES PROPIAS (@KEYFRAMES)
+   ========================================== */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ==========================================
+   10. ACCESIBILIDAD (Prefers Reduced Motion)
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
