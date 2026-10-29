@@ -1,0 +1,14 @@
+// Mixin para transiciones suaves
+@mixin transition-smooth($property: all, $time: 0.2s) {
+  transition: $property $time ease;
+}
+// Mixin para flexbox centrado
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// Mixin para sombras suaves
+@mixin soft-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

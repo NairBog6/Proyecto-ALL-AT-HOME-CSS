@@ -1,0 +1,8 @@
+// 1. Configuración y utilidades
+@import 'variables';
+@import 'mixins';
+// 2. Estilos base
+@import 'base';
+// 3. Estructura y componentes
+@import 'layout';
+@import 'components';

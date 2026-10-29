@@ -1,0 +1,15 @@
+// Paleta de colores
+$color-primary: #1a5f7a;        // Azul oscuro principal (navbar, títulos, botones)
+$color-secondary: #57c5b6;      // Turquesa / acento (hover, bordes, subtítulos)
+$color-bg-light: #f0f4f8;       // Fondo general y fondo de cards
+$color-white: #ffffff;          // Fondo de secciones y textos claros
+$color-text-dark: #333333;      // Texto base
+$color-text-muted: #4a4a4a;     // Texto secundario / párrafos
+// Tipografía
+$font-family-base: 'Poppins', sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+// Transiciones y bordes
+$border-radius-sm: 6px;
+$border-radius-md: 8px;
+$transition-fast: 0.2s ease;

@@ -1,0 +1,41 @@
+// Navbar
+.navbar {
+  background-color: $color-primary !important;
+  padding: 1rem 0;
+  .navbar-brand {
+    color: $color-white !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    img {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+  }
+  .nav-link {
+    color: $color-bg-light !important;
+    font-weight: 600;
+    @include transition-smooth(color, 0.2s);
+    &:hover,
+    &.active {
+      color: $color-secondary !important;
+    }
+  }
+  .navbar-toggler {
+    border-color: $color-secondary;
+  }
+}
+// Secciones principales
+.hero,
+.seccion-contenido,
+.seccion-destacados {
+  background-color: $color-white;
+  border-radius: $border-radius-md;
+  padding: 2.5rem 2rem;
+  img {
+    border: 1px solid $color-secondary;
+  }
+}
+// Footer
+.footer-principal {
+  background-color: $color-primary;
+  color: $color-bg-light;
+}
